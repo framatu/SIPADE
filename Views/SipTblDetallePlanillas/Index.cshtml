@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SIPADE.Models.SipTblDetallePlanilla>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblDedDeducciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblDplBonificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblDplIgss)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblDplIrtra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblDplIsr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblDplOtros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblEpl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblTre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblDedDeducciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblDplBonificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblDplIgss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblDplIrtra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblDplIsr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblDplOtros)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblEpl.SipTblEplId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblTre.SipTblTreId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SipTblDplId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SipTblDplId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SipTblDplId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,69 @@
+﻿@model SIPADE.Models.SipTblDetallePlanilla
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>SipTblDetallePlanilla</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SipTblDplId" />
+            <div class="form-group">
+                <label asp-for="SipTblEplId" class="control-label"></label>
+                <select asp-for="SipTblEplId" class="form-control" asp-items="ViewBag.SipTblEplId"></select>
+                <span asp-validation-for="SipTblEplId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblTreId" class="control-label"></label>
+                <select asp-for="SipTblTreId" class="form-control" asp-items="ViewBag.SipTblTreId"></select>
+                <span asp-validation-for="SipTblTreId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblDedDeducciones" class="control-label"></label>
+                <input asp-for="SipTblDedDeducciones" class="form-control" />
+                <span asp-validation-for="SipTblDedDeducciones" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblDplBonificacion" class="control-label"></label>
+                <input asp-for="SipTblDplBonificacion" class="form-control" />
+                <span asp-validation-for="SipTblDplBonificacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblDplIgss" class="control-label"></label>
+                <input asp-for="SipTblDplIgss" class="form-control" />
+                <span asp-validation-for="SipTblDplIgss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblDplIrtra" class="control-label"></label>
+                <input asp-for="SipTblDplIrtra" class="form-control" />
+                <span asp-validation-for="SipTblDplIrtra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblDplIsr" class="control-label"></label>
+                <input asp-for="SipTblDplIsr" class="form-control" />
+                <span asp-validation-for="SipTblDplIsr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblDplOtros" class="control-label"></label>
+                <input asp-for="SipTblDplOtros" class="form-control" />
+                <span asp-validation-for="SipTblDplOtros" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

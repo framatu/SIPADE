@@ -1,0 +1,66 @@
+﻿@model SIPADE.Models.SipTblDetallePlanilla
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SipTblDetallePlanilla</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblDedDeducciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblDedDeducciones)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblDplBonificacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblDplBonificacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblDplIgss)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblDplIgss)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblDplIrtra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblDplIrtra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblDplIsr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblDplIsr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblDplOtros)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblDplOtros)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblEpl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblEpl.SipTblEplId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblTre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblTre.SipTblTreId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SipTblDplId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

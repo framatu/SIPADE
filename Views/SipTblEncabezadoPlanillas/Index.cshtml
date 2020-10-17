@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SIPADE.Models.SipTblEncabezadoPlanilla>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblEplFechahora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblEplFechainicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SipTblEplFechafin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblEplFechahora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblEplFechainicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SipTblEplFechafin)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SipTblEplId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SipTblEplId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SipTblEplId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

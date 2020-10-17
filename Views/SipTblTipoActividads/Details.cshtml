@@ -1,0 +1,30 @@
+﻿@model SIPADE.Models.SipTblTipoActividad
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SipTblTipoActividad</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblActNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblActNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblActCostoact)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblActCostoact)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SipTblActId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

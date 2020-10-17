@@ -1,0 +1,42 @@
+﻿@model SIPADE.Models.SipTblTrabajoRealizado
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SipTblTrabajoRealizado</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblTreCantidad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblTreCantidad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblTreTotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblTreTotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblAct)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblAct.SipTblActId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SipTblEmp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SipTblEmp.SipTblEmpId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SipTblTreId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

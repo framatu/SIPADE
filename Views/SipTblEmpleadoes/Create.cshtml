@@ -1,0 +1,73 @@
+﻿@model SIPADE.Models.SipTblEmpleado
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SipTblEmpleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpId" class="control-label"></label>
+                <input asp-for="SipTblEmpId" class="form-control" />
+                <span asp-validation-for="SipTblEmpId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpNombres" class="control-label"></label>
+                <input asp-for="SipTblEmpNombres" class="form-control" />
+                <span asp-validation-for="SipTblEmpNombres" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpApellidos" class="control-label"></label>
+                <input asp-for="SipTblEmpApellidos" class="form-control" />
+                <span asp-validation-for="SipTblEmpApellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpNit" class="control-label"></label>
+                <input asp-for="SipTblEmpNit" class="form-control" />
+                <span asp-validation-for="SipTblEmpNit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpDpi" class="control-label"></label>
+                <input asp-for="SipTblEmpDpi" class="form-control" />
+                <span asp-validation-for="SipTblEmpDpi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpTel" class="control-label"></label>
+                <input asp-for="SipTblEmpTel" class="form-control" />
+                <span asp-validation-for="SipTblEmpTel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpDireccion" class="control-label"></label>
+                <input asp-for="SipTblEmpDireccion" class="form-control" />
+                <span asp-validation-for="SipTblEmpDireccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpNumigss" class="control-label"></label>
+                <input asp-for="SipTblEmpNumigss" class="form-control" />
+                <span asp-validation-for="SipTblEmpNumigss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SipTblEmpNumirtra" class="control-label"></label>
+                <input asp-for="SipTblEmpNumirtra" class="form-control" />
+                <span asp-validation-for="SipTblEmpNumirtra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
