@@ -25,7 +25,6 @@ namespace SIPADE
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllersWithViews();
             var connection = Configuration.GetConnectionString("Connection");
             services.AddDbContext<SIPADEContext>(options => options.UseSqlServer(connection));
